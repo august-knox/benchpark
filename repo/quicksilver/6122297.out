@@ -1,0 +1,57 @@
+logout
+
+------------------------------------------------------------
+Sender: LSF System <lsfadmin@lassen710>
+Subject: Job 6122297: </usr/workspace/knox10/newBMs/quicksilver/barryTest/barryEx/workspace/experiments/quicksilver/quicksilver/quicksilver_self.spec_655360_16/execute_experiment> in cluster <lassen> Exited
+
+Job </usr/workspace/knox10/newBMs/quicksilver/barryTest/barryEx/workspace/experiments/quicksilver/quicksilver/quicksilver_self.spec_655360_16/execute_experiment> was submitted from host <lassen708> by user <knox10> in cluster <lassen> at Wed Aug 28 14:54:16 2024
+Job was executed on host(s) <1*lassen710>, in queue <pdebug>, as user <knox10> in cluster <lassen> at Wed Aug 28 14:54:19 2024
+                            <40*lassen20>
+</g/g11/knox10> was used as the home directory.
+</usr/WS1/knox10/benchpark/repo/quicksilver> was used as the working directory.
+Started at Wed Aug 28 14:54:19 2024
+Terminated at Wed Aug 28 14:54:25 2024
+Results reported at Wed Aug 28 14:54:25 2024
+
+Your job looked like:
+
+------------------------------------------------------------
+# LSBATCH: User input
+#!/bin/bash
+# Copyright 2023 Lawrence Livermore National Security, LLC and other
+# Benchpark Project Developers. See the top-level COPYRIGHT file for details.
+#
+# SPDX-License-Identifier: Apache-2.0
+
+#BSUB -nnodes 1
+#BSUB -q pdebug
+#BSUB -W 02:00
+
+cd /usr/workspace/knox10/newBMs/quicksilver/barryTest/barryEx/workspace/experiments/quicksilver/quicksilver/quicksilver_self.spec_655360_16
+
+
+rm -f "/usr/workspace/knox10/newBMs/quicksilver/barryTest/barryEx/workspace/experiments/quicksilver/quicksilver/quicksilver_self.spec_655360_16/quicksilver_self.spec_655360_16.out"
+touch "/usr/workspace/knox10/newBMs/quicksilver/barryTest/barryEx/workspace/experiments/quicksilver/quicksilver/quicksilver_self.spec_655360_16/quicksilver_self.spec_655360_16.out"
+export OMP_NUM_THREADS="1";
+lrun -n 16 qs -i {quicksilver}/Examples/CTS2_Benchmark/CTS2.inp -X 64 -Y 32 -Z 32 -I 4 -J 2 -K 2 -x 64 -y 32 -z 32 -n 655360 >> "/usr/workspace/knox10/newBMs/quicksilver/barryTest/barryEx/workspace/experiments/quicksilver/quicksilver/quicksilver_self.spec_655360_16/quicksilver_self.spec_655360_16.out" 2>&1
+
+
+------------------------------------------------------------
+
+Exited with exit code 1.
+
+Resource usage summary:
+
+    CPU time :                                   0.27 sec.
+    Max Memory :                                 -
+    Average Memory :                             -
+    Total Requested Memory :                     -
+    Delta Memory :                               -
+    Max Swap :                                   -
+    Max Processes :                              -
+    Max Threads :                                -
+    Run time :                                   6 sec.
+    Turnaround time :                            9 sec.
+
+The output (if any) is above this job summary.
+
